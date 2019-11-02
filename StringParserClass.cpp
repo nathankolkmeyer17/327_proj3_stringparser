@@ -68,16 +68,16 @@ int KP_StringParserClass::StringParserClass::getDataBetweenTags(char *pDataToSea
 		string str;
 		char *pEnd;
 		char* pStart = *(&p);
-		char *pNonceStart = 0;
-		char *pNonceEnd = 0;
+		char *pNoStart = 0;
+		char *pNoEnd = 0;
 		if (x == SUCCESS) {
-			pNonceStart = pDataToSearchThru;
-			pStart = pNonceStart;
+			pNoStart = pDataToSearchThru;
+			pStart = pNoStart;
 			x = findTag(pEndTag, pStart, pEnd);
 			switch (x) {
 			case SUCCESS:
-				pNonceEnd = pStart;
-				str.assign(pNonceStart, *(&pNonceEnd) - pNonceStart);
+				pNoEnd = pStart;
+				str.assign(pNoStart, *(&pNoEnd) - pNoStart);
 				myVector.push_back(str);
 				pStart = pEnd;
 				pDataToSearchThru = pEnd;
