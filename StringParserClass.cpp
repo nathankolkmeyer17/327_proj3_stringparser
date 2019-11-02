@@ -12,7 +12,7 @@
 #include "../327_proj3_test/includes/constants.h"
 #include "../327_proj3_test/includes/StringParserClass.h"
 using namespace std;
-char* inBetween;
+
 //dont forget to initialize member variables
 KP_StringParserClass::StringParserClass::StringParserClass(void){
 	pStartTag = new char(0);
